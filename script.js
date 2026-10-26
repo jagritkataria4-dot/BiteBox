@@ -1,12 +1,85 @@
 const LOGO="images/logo.jpg";
 const OWNER_WA="917404852562";/* shop WhatsApp number with country code, e.g. 919876543210 */
-const MENU=[
-{t:"Pizza",img:"images./pizza.jpg",{sizes:["Regular","Medium","Large"],items:[["Golden Delight Pizza",[170,260,360]],["Cheese Burst Pizza",[200,280,400]],["Margherita Pizza",[220,350,450]],["Veggie Supreme Pizza",[190,290,390]],["Paneer Tikka Pizza",[210,310,420]],["Corn & Capsicum Pizza",[180,270,370]],["Mushroom Delight Pizza",[200,300,400]]]},
-{t:"Burger",img:"images./burger.jpg",sizes:[""],items:[["Veg Burger",[50]],["Aloo Tikki Burger",[70]],["Crispy Veg Burger",[80]],["Cheese Burger",[90]],["Paneer Burger",[100]],["Mexican Veggie Burger",[110]]]},
-{t:"Pasta",img:"images./pasta.jpg",sizes:["Half","Full"],items:[["White Sauce Pasta",[155,275]],["Red Sauce Pasta",[165,285]],["Mix Sauce Pasta",[175,295]],["Pink Sauce Pasta",[170,290]],["Mac & Cheese",[180,300]],["Paneer Makhani Pasta",[185,305]],["Pesto Veg Pasta",[180,300]]]},
-{t:"Fries & Snacks",img:"images./fries.jpg",sizes:["Regular","Large"],items:[["French Fries",[70,115]],["Peri Peri Fries",[90,145]],["Veg Nuggets",[90,150]],["Garlic Bread",[100,165]],["Cheesy Garlic Bread",[125,190]],["Loaded Cheese Fries",[130,190]]]},
-{t:"Drinks",img:"images./drink.jpg",sizes:["Small","Large"],items:[["Cold Drink",[35,55]],["Fresh Lime Soda",[45,70]],["Cold Coffee",[80,120]],["Mango Shake",[90,130]],["Oreo Shake",[100,150]]]},
-{t:"Desserts",img:"images./dessert.jpg",sizes:[""],items:[["Gulab Jamun (2 pcs)",[60]],["Chocolate Brownie",[80]],["Choco Lava Cake",[90]],["Ice Cream Sundae",[110]]]}];
+
+const MENU = [
+  {
+    t: "Pizza",
+    img: "./pizza.jpg",
+    sizes: ["Regular", "Medium", "Large"],
+    items: [
+      ["Golden Delight Pizza", [170, 260, 360]],
+      ["Cheese Burst Pizza", [200, 280, 400]],
+      ["Margherita Pizza", [220, 350, 450]],
+      ["Veggie Supreme Pizza", [190, 290, 390]],
+      ["Paneer Tikka Pizza", [210, 310, 420]],
+      ["Corn & Capsicum Pizza", [180, 270, 370]],
+      ["Mushroom Delight Pizza", [200, 300, 400]]
+    ]
+  },
+  {
+    t: "Burger",
+    img: "./burger.jpg",
+    sizes: [""],
+    items: [
+      ["Veg Burger", [50]],
+      ["Aloo Tikki Burger", [70]],
+      ["Crispy Veg Burger", [80]],
+      ["Cheese Burger", [90]],
+      ["Paneer Burger", [100]],
+      ["Mexican Veggie Burger", [110]]
+    ]
+  },
+  {
+    t: "Pasta",
+    img: "./pasta.jpg",
+    sizes: ["Half", "Full"],
+    items: [
+      ["White Sauce Pasta", [155, 275]],
+      ["Red Sauce Pasta", [165, 285]],
+      ["Mix Sauce Pasta", [175, 295]],
+      ["Pink Sauce Pasta", [170, 290]],
+      ["Mac & Cheese", [180, 300]],
+      ["Paneer Makhani Pasta", [185, 305]],
+      ["Pesto Veg Pasta", [180, 300]]
+    ]
+  },
+  {
+    t: "Fries & Snacks",
+    img: "./fries.jpg",
+    sizes: ["Regular", "Large"],
+    items: [
+      ["French Fries", [70, 115]],
+      ["Peri Peri Fries", [90, 145]],
+      ["Veg Nuggets", [90, 150]],
+      ["Garlic Bread", [100, 165]],
+      ["Cheesy Garlic Bread", [125, 190]],
+      ["Loaded Cheese Fries", [130, 190]]
+    ]
+  },
+  {
+    t: "Drinks",
+    img: "./drink.jpg",
+    sizes: ["Small", "Large"],
+    items: [
+      ["Cold Drink", [35, 55]],
+      ["Fresh Lime Soda", [45, 70]],
+      ["Cold Coffee", [80, 120]],
+      ["Mango Shake", [90, 130]],
+      ["Oreo Shake", [100, 150]]
+    ]
+  },
+  {
+    t: "Desserts",
+    img: "./dessert.jpg",
+    sizes: [""],
+    items: [
+      ["Gulab Jamun (2 pcs)", [60]],
+      ["Chocolate Brownie", [80]],
+      ["Choco Lava Cake", [90]],
+      ["Ice Cream Sundae", [110]]
+    ]
+  }
+];
 const cart={};const sel={};
 const $=id=>document.getElementById(id);
 function renderMenu(){
