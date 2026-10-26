@@ -1,4 +1,4 @@
-const LOGO="images./logo.jpg";
+const LOGO="./logo.jpg";
 const OWNER_WA="917404852562";/* shop WhatsApp number with country code, e.g. 919876543210 */
 
 const MENU = [
