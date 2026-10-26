@@ -1,4 +1,4 @@
-const LOGO="images/logo.jpg";
+const LOGO="images./logo.jpg";
 const OWNER_WA="917404852562";/* shop WhatsApp number with country code, e.g. 919876543210 */
 
 const MENU = [
@@ -136,7 +136,7 @@ const no="BB"+Math.floor(1000+Math.random()*9000),when=new Date().toLocaleString
 const lines=Object.values(cart).map(x=>"- "+x.n+(x.z?" ("+x.z+")":"")+" x"+x.q+" = Rs."+x.p*x.q).join("\n");
 const msg="New order #"+no+"\nName: "+name+"\nPhone: "+ph+"\nAddress: "+ad+"\n\nItems:\n"+lines+"\n\nTotal: Rs."+t+"\nPayment: Cash on delivery";
 const waUrl="https://wa.me/"+OWNER_WA+"?text="+encodeURIComponent(msg);
-$("billWrap").innerHTML=`<div class="box ok" id="billBox"><h2>Order placed!</h2><p>Thanks ${esc(name)}! Your order is confirmed. Here is your bill.</p>
+$("wgo").onclick=()=>{const n=$("wn").value.trim(),p=$("wp").value.trim(),a=$("wa").value.trim(),m=check(n,p,a);$("werr").textContent=m;if(!m){save({name:n,ph:p,ad:a});enter()}};
 <div class="receipt"><div class="rh"><b>🍔 BITE BOX</b><br>Good Food, Happy Mood!</div>
 <div class="meta"><span>Order #${no}</span><span>${when}</span></div>
 <div class="meta2"><b>${esc(name)}</b> · ${esc(ph)}<br>${esc(ad)}</div>
