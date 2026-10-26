@@ -1,6 +1,6 @@
 const LOGO="images./logo.jpg";
 const OWNER_WA="917404852562";/* shop WhatsApp number with country code, e.g. 919876543210 */
-
+<img class="logo w1" src="./logo.jpg" alt="Bite Box logo">
 const MENU = [
   {
     t: "Pizza",
