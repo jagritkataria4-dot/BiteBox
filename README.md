@@ -1,2 +1,34 @@
-# BiteBox
-This is the app for order food . 
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bite Box</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="welcome" class="screen"><div class="wcard"><img class="logo wl" alt="Bite Box logo"><h1>Bite Box</h1><p>Good food, happy mood! Enter your details once and we will remember them for every order.</p>
+<label for="wn">Name</label><input type="text" id="wn" autocomplete="name">
+<label for="wp">Phone number</label><input type="tel" id="wp" maxlength="10" inputmode="numeric" placeholder="10-digit number" autocomplete="tel">
+<label for="wa">Delivery address</label><textarea id="wa" rows="3" autocomplete="street-address" placeholder="House no., street, landmark"></textarea><button type="button" class="loc" data-t="wa">📍 Use my current location</button><p class="hint"></p>
+<p class="err" id="werr" role="alert"></p><button class="btn" type="button" id="wgo" style="width:100%">Start ordering</button></div></div>
+
+<div id="app" hidden>
+<header class="top"><img class="logo" alt=""><span>Bite Box</span><span class="crumb" id="crumb"></span><span id="hi"></span></header>
+<main class="wrap">
+<div class="view" id="v-home"><h2 class="pagetitle">🏠 Home</h2>
+<div class="homehero"><div class="floaters" aria-hidden="true"><i>🍕</i><i>🍔</i><i>🍟</i><i>🍝</i><i>🥤</i><i>🍰</i></div>
+<img class="logo" alt="Bite Box logo"><h1>Bite Box</h1><p class="greet" id="greet"></p><p>Pure veg pizza, burgers, pasta and more, delivered to your door.</p><button class="btn" type="button" data-go="menu">View menu</button></div>
+<div class="marq" aria-hidden="true"><div>🌱 100% Pure Veg &nbsp;•&nbsp; 🔥 Fresh &amp; Hot &nbsp;•&nbsp; 😋 Good Food, Happy Mood! &nbsp;•&nbsp; 🛵 Cash on delivery &nbsp;•&nbsp; 🌱 100% Pure Veg &nbsp;•&nbsp; 🔥 Fresh &amp; Hot &nbsp;•&nbsp; 😋 Good Food, Happy Mood! &nbsp;•&nbsp; 🛵 Cash on delivery &nbsp;•&nbsp;</div></div>
+<div id="reorder"></div>
+<h3 class="sec">⭐ Popular picks</h3><div class="hscroll" id="pop"></div>
+<h3 class="sec">What are you craving?</h3><div class="tiles" id="tiles"></div>
+<div class="box" style="margin-top:20px"><b>Deliver to</b><div class="savedbox" id="dl"></div><button class="link" type="button" data-go="profile">Change details</button></div></div>
+<div class="view" id="v-menu" hidden><h2 class="pagetitle">🍔 Menu</h2><p class="sub">Pick a size, tap Add, then open your cart.</p><div id="menuBox"></div></div>
+<div class="view" id="v-cart" hidden><h2 class="pagetitle">🛒 My Cart</h2><div id="cartWrap"><div class="box"><h2>Your order</h2><div id="cart"></div><div class="total"><span>Total</span><span>₹<span id="total">0</span></span></div></div>
+<div class="box" style="margin-top:18px"><b>Deliver to</b><div class="savedbox" id="dl2"></div><button class="link" type="button" data-go="profile">Change details</button>
+<label>Payment</label><div>💵 Cash on delivery</div><p class="err" id="err" role="alert"></p><button class="btn" type="button" id="placeBtn" style="width:100%">Place order</button></div></div><div id="billWrap" hidden></div></div>
+<div class="view" id="v-profile" hidden><h2 class="pagetitle">👤 My Profile</h2><div class="box"><h2>Your details</h2><label for="pn">Name</label><input type="text" id="pn"><label for="pp">Phone number</label><input type="tel" id="pp" maxlength="10" inputmode="numeric"><label for="pa">Delivery address</label><textarea id="pa" rows="3" placeholder="House no., street, landmark"></textarea><button type="button" class="loc" data-t="pa">📍 Use my current location</button><p class="hint"></p>
+<p class="err" id="perr" role="alert"></p><p class="msg" id="pmsg"></p><button class="btn" type="button" id="psave" style="width:100%">Save details</button></div></div>
+</main>
+<nav class="tabs"><button data-go="home" class="on"><span class="i">🏠</span>Home</button><button data-go="menu"><span class="i">🍔</span>Menu</button><button data-go="cart"><span class="i">🛒</span>Cart<b id="badge"></b></button><button data-go="profile"><span class="i">👤</span>Profile</button></nav>
+</div>
+<script src="script.js"></script></body></html>
